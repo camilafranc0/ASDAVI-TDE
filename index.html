@@ -8,6 +8,7 @@
     <title>Associação Dançar à Vida</title>
   </head>
   <body>
+   
     <header>
       <div class="text">
         <h3>AS<span>DA</span>VI</h3>
@@ -16,15 +17,16 @@
 
       <nav>
         <ul>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="#section1">Sobre</a></li>
           <li><a href="#section2">Localização</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#section3">Serviços</a></li>
+          <li><a href="#section4">Responsável</a></li>
+          <li><a href="#footer">Contato</a></li>
         </ul>
       </nav>
     </header>
-
-    <section class="section1">
+    
+    <section id="section1" class="section1">
       <div class="quemSomos">
         <div class="texts">
           <h2>Quem somos</h2>
@@ -92,7 +94,7 @@
       </div>
     </section>
 
-    <section class="section3">
+    <section id="section3" class="section3">
       <div class="textSection3">
         <h2>O que fazemos</h2>
         <p>
@@ -159,7 +161,7 @@
       </div>
     </section>
 
-    <section class="section4">
+    <section id="section4" class="section4">
       <h2>Responsável</h2>
       <div class="img">
         <img
@@ -170,7 +172,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer id="footer">
       <div class="info">
         <h2>Contato</h2>
 
@@ -184,7 +186,45 @@
 
         <p>Email: dancaravidaipira@gmail.com</p>
         <p>Telefone: (75) 3254226 ou (75) 991660147</p>
+        <div class="btn">
+          <button class="btnn" onclick="doar()" id="doar">FAÇA SUA DOAÇÃO</button>
+        </div>
       </div>
     </footer>
+    
+    <dialog id="modal1">
+      <div class="modal">
+        <form action="#" method="post">
+            <div class="inputs">
+              <label for="name">Digite seu nome</label>
+              <input id="name" type="text" value="">
+              <span class="erro" id="erroNome"></span>
+            </div>
+            <div class="inputs">
+              <label for="name">Digite seu email</label>
+              <input id="email" type="email" >
+              <span class="erro" id="erroEmail"></span>
+            </div>
+            <div class="inputs">
+              <label for="name">Informe o valor da doação</label>
+              <input id="valor" type="number" value="" min="0">
+              <span class="erro" id="erroValor"></span>
+              
+            </div>
+            
+            <button  class="btnn" onclick="enviar()" id="close" type="submit">Enviar</button>  
+          </form>
+        
+      </div>
+      
+      
+    </dialog>
+    <dialog id="modal2">
+      <div class="modal2">
+        <p>Agradecemos pela sua doação!</p>
+        <button class="btn2" onclick="fechar()" id="fechar">X</button>
+      </div>
+    </dialog>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
